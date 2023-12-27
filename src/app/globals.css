@@ -18,10 +18,22 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 100%;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px 12px 12px 12px;
+}
+
+.dark body {
+  color: rgb(255, 255, 255);
+}
+
+.dark body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
 }
