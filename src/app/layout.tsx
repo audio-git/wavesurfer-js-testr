@@ -44,9 +44,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`${notoSansLocal.variable}`}>
-      <body className="font-sans w-screen min-h-[100dvh] h-[100dvh] bg-slate-50 dark:bg-gray-950 transition-colors">
+      <body className="font-sans w-[100dvw] min-h-[100dvh] h-[100dvh] background transition-colors overflow-hidden">
         <Header />
-        <main className="w-full h-[calc(100dvh_-_3rem)]">{children}</main>
+        <main className="w-full h-[calc(100dvh_-_4rem)] flex flex-col items-center">{children}</main>
       </body>
 
       <ThemeSetter />

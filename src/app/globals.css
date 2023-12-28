@@ -2,38 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .bg-error {
+    @apply bg-red-400 dark:bg-red-600 transition-colors;
+  }
+  .text-error {
+    @apply text-red-400 dark:text-red-600 transition-colors;
+  }
+  .on-error {
+    @apply text-white dark:text-neutral-300 transition-colors;
+  }
+
+  .background {
+    @apply bg-neutral-100 dark:bg-neutral-950 transition-colors;
+  }
+
+  .surface {
+    @apply bg-white dark:bg-neutral-800 text-neutral-950 dark:text-neutral-200 transition-colors;
+  }
+  .on-surface {
+    @apply text-neutral-950 dark:text-neutral-200 transition-colors;
+  }
+
+  .bg-primary {
+    @apply bg-primary-400 dark:bg-primary-800 transition-colors;
+  }
+  .text-primary {
+    @apply text-primary-400 dark:text-primary-800 transition-colors;
+  }
+  .bg-secondary {
+    @apply bg-secondary-400 dark:bg-secondary-800 transition-colors;
+  }
+  .text-secondary {
+    @apply text-secondary-400 dark:text-secondary-800 transition-colors;
+  }
+  .on-primary {
+    @apply text-white dark:text-primary-200 transition-colors;
+  }
+  .on-secondary {
+    @apply text-white dark:text-secondary-200 transition-colors;
+  }
+
+  .dp0 {
+    @apply bg-neutral-100 dark:bg-neutral-950 shadow-lg transition-colors;
+  }
+  .dp1 {
+    @apply bg-neutral-200 dark:bg-neutral-900 shadow-lg transition-colors;
+  }
+  .dp2 {
+    @apply bg-neutral-300 dark:bg-neutral-800 shadow-lg transition-colors;
+  }
+  .dp3 {
+    @apply bg-neutral-400 dark:bg-neutral-700 shadow-lg transition-colors;
+  }
+  .dp4 {
+    @apply bg-neutral-500 dark:bg-neutral-600 shadow-lg transition-colors;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* 어차피 상태관리에서 dark 클래스 넣어줌 */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+html {
+  --base-color: 0, 0, 0;
+}
+
+html.dark {
+  --base-color: 255, 255, 255;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--base-color));
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
   height: 100%;
 }
 
-body::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.3);
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--base-color), 0.3);
   border-radius: 12px 12px 12px 12px;
 }
 
 .dark body {
   color: rgb(255, 255, 255);
-}
-
-.dark body::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
 }

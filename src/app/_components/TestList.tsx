@@ -1,5 +1,6 @@
 "use client";
 
+import Card from "@/components/Card";
 import useStore from "@/lib/hooks/useStore";
 import { useTestStore } from "@/lib/store/testStore";
 
@@ -10,10 +11,7 @@ export default function TestList() {
   return (
     <ul className="w-44 flex flex-col gap-4">
       {tests?.map((test) => (
-        <li
-          key={test.index}
-          className="flex flex-col p-2 bg-white text-black rounded-lg w-full"
-        >
+        <Card key={test.index}>
           <h3>{test.index}</h3>
           <p>{test.name}</p>
           <button
@@ -22,7 +20,7 @@ export default function TestList() {
           >
             Del
           </button>
-        </li>
+        </Card>
       ))}
     </ul>
   );
