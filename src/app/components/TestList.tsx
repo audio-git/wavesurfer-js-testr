@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/components/Card";
+import Card from "@/ui/Card";
 import useStore from "@/lib/hooks/useStore";
 import { useTestStore } from "@/lib/store/testStore";
 

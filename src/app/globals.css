@@ -37,10 +37,10 @@
     @apply text-secondary-400 dark:text-secondary-800 transition-colors;
   }
   .on-primary {
-    @apply text-white dark:text-primary-200 transition-colors;
+    @apply text-white dark:text-primary-50 transition-colors;
   }
   .on-secondary {
-    @apply text-white dark:text-secondary-200 transition-colors;
+    @apply text-white dark:text-secondary-50 transition-colors;
   }
 
   .dp0 {
@@ -50,10 +50,10 @@
     @apply bg-neutral-200 dark:bg-neutral-900 shadow-lg transition-colors;
   }
   .dp2 {
-    @apply bg-neutral-300 dark:bg-neutral-800 shadow-lg transition-colors;
+    @apply bg-slate-100 dark:bg-neutral-800 shadow-lg transition-colors;
   }
   .dp3 {
-    @apply bg-neutral-400 dark:bg-neutral-700 shadow-lg transition-colors;
+    @apply bg-slate-200 dark:bg-neutral-700 shadow-lg transition-colors;
   }
   .dp4 {
     @apply bg-neutral-500 dark:bg-neutral-600 shadow-lg transition-colors;
@@ -85,6 +85,7 @@ html.dark {
 
 body {
   color: rgb(var(--base-color));
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar {

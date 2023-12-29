@@ -1,4 +1,4 @@
-import TestList from "../_components/TestList";
+import TestList from "../components/TestList";
 
 export default function TestPage() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/components/Card";
+import Card from "@/ui/Card";
 import { FaFastBackward, FaPause, FaFastForward } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 

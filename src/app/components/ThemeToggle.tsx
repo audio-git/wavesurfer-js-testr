@@ -12,11 +12,11 @@ export default function ThemeToggle() {
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
 
   return (
-    <div className="relative flex items-center text-black dark:text-white text-xl gap-2 transition-colors">
+    <div className="relative flex items-center text-black dark:text-white text-sm gap-2 transition-colors">
       {followOS ? <GrSystem /> : <MdSunny />}
 
       <motion.button
-        className={`w-16 bg-black rounded-3xl p-1 dark:bg-white transition-colors flex ${
+        className={`w-14 bg-black rounded-3xl p-1 dark:bg-white transition-colors flex ${
           followOS ? "cursor-default opacity-50" : "cursor-pointer opacity-80"
         }`}
         style={{
@@ -27,7 +27,7 @@ export default function ThemeToggle() {
       >
         <motion.article
           layout
-          className={`w-6 h-6 ${
+          className={`w-4 h-4 ${
             followOS
               ? "bg-gray-800 dark:bg-slate-300"
               : "bg-white dark:bg-black"

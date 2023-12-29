@@ -43,16 +43,5 @@ export default function WavePage() {
     a?.playPause();
   }, [a]);
 
-  useEffect(() => {
-    console.log(isPlaying);
-  }, [isPlaying]);
-
-  return (
-    <main className="w-full">
-      <div ref={waveForm}></div>
-
-      {time}
-      <button onClick={play}>ASA</button>
-    </main>
-  );
+  return <main className="w-full">sdas</main>;
 }
